@@ -1,23 +1,23 @@
 import React from "react";
 import "./ShowCard.css";
 import { Button, Card, Col } from "react-bootstrap";
+import useAuth from "../../Hooks/useAuth";
 
 const ShowCard = (props) => {
   const { img, date, title, _id } = props.sendData;
+  const {user} = useAuth();
 
-  const handelBooking = (bookId) => {
-    const booking = {bookId};
-    console.log('clicked');
+  const handelBooking = () => {
+
     fetch("http://localhost:5000/booking", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(booking)
+      body: JSON.stringify({...props.sendData , email:user.email })
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         if (data.insertedId) {
           alert("Booked");
         }
@@ -32,7 +32,7 @@ const ShowCard = (props) => {
           <Card.Text>{date}</Card.Text>
         </Card.Body>
         <Card.Footer>
-          <Button onClick={() => handelBooking(_id)} variant="primary">
+          <Button onClick={handelBooking} variant="primary">
             Book Now
           </Button>
         </Card.Footer>
