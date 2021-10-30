@@ -8,11 +8,11 @@ const BookingPackages = () => {
     const [bookingPackages, setBookingPackages] = useState([]);
 
     useEffect(()=>{      
-        fetch('http://localhost:5000/bookingpackages')
+        fetch(`http://localhost:5000/mypackages/${user.email}`)
         .then(res => res.json())
         .then(data => setBookingPackages(data));
     });
-    
+
     return (
         <div id="bookingpackages">
             <h1> {user.displayName} Packages</h1>

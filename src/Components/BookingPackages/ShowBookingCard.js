@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../ShowCard/ShowCard.css";
 import { Button, Card, Col } from "react-bootstrap";
 import useAuth from "../../Hooks/useAuth";
@@ -9,22 +9,10 @@ const ShowBookingCard = (props) => {
     const {user} = useAuth();
     
     const deleteBooking = ()=>{
-
+        fetch(`http://localhost:5000/mypackages/${_id}`, {
+            
+        })
     };
-
-    fetch("http://localhost:5000/bookingpackages", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(user.email)
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.insertedId) {
-          alert("Deleted Booking");
-        }
-      });
 
     return (
     <div>
