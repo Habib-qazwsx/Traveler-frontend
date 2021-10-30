@@ -9,15 +9,22 @@ import Packages from './Components/Packages/Packages';
 import NotFound from './Components/NotFound/NotFound';
 import AboutUs from './Components/AboutUs/AboutUs';
 import Contact from './Components/Contact/Contact';
+import Footer from './Components/Footer/Footer';
+import Layout from './Components/Layout';
+import Authprovider from './Context/Authprovider';
+import PrivateRaout from './Components/Login/PrivateRaout';
 
 
 function App() {
   return (
     <div>
+      <Authprovider>
       <BrowserRouter>
         <Header></Header>
-        <Switch>
 
+        <Layout>
+        <Switch>
+        
           <Route exact path='/'>
             <Home></Home>
           </Route>
@@ -30,15 +37,15 @@ function App() {
             <Packages></Packages>
           </Route>
 
-          <Route path='/bookingpackages'> 
+          <PrivateRaout path='/bookingpackages'> 
             <BookingPackages></BookingPackages>
-          </Route>
+          </PrivateRaout>
 
-          <Route>
+          <Route path='/aboutus'>
             <AboutUs></AboutUs>
           </Route>
 
-          <Route>
+          <Route path='/contact'>
             <Contact></Contact>
           </Route>
 
@@ -49,9 +56,13 @@ function App() {
           <Route path='*'>
             <NotFound></NotFound>
           </Route>
+         
         </Switch>
+         </Layout>
+        <Footer></Footer>
 
       </BrowserRouter>
+      </Authprovider>
     </div>
   );
 }

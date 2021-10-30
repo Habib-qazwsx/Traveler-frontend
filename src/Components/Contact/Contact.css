@@ -1,0 +1,38 @@
+.parentDiv{
+    display: flex;
+    justify-content: space-around;
+}
+.div{
+    margin-top: 50px;
+}
+.div h1{
+    text-align: center;
+    margin-bottom: 70px;
+    color: rgb(161, 24, 0);
+    background-color: rgb(158, 158, 158);
+}
+.child1{
+    text-align: center;
+    width: 400px;
+    height: 150px;
+    border:1px solid gray;
+    color: rgb(139, 34, 15);
+    padding: 10px;
+    box-shadow: 5px 10px inset;
+}
+.child2{
+    text-align: center;
+    width: 400px;
+    border:1px solid gray;
+    color: rgb(139, 34, 15);
+    padding: 10px;
+    box-shadow: 5px 10px inset;
+}
+.child3{
+    text-align: center;
+    width: 400px;
+    border:1px solid gray;
+    color: rgb(139, 34, 15);
+    padding: 10px;
+    box-shadow: 5px 10px inset;
+}

@@ -2,20 +2,22 @@ import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import ShowCard from '../ShowCard/ShowCard';
 
-const Packages = () => {
+
+const HomePackages = () => {
     const [packages, setPackages] = useState([]);
     useEffect(()=>{
         fetch('http://localhost:5000/packages')
         .then(res => res.json())
         .then(data => setPackages(data));
     });
- 
+
+    
     return (
-        <div id="packages">
+        <div>
             <h1>Our Packages</h1>
             <Row>
                {
-                packages.map(sendData =><ShowCard
+                packages.slice(0, 6).map(sendData =><ShowCard
                     sendData={sendData}
                     key={sendData._id}
                 ></ShowCard>)
@@ -26,4 +28,4 @@ const Packages = () => {
     );
 };
 
-export default Packages;
+export default HomePackages;

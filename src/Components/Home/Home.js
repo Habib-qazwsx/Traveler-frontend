@@ -1,13 +1,17 @@
 import React from "react";
-import homePackages from "./homePackages";
+import HomePackages from "./HomePackages";
 import SliderVew from "./SliderVew";
+import VisaProcessing from "./VisaProcessing";
+import WhyChooseUs from "./WhyChooseUs";
 
 
 const Home = () => {
   return (
-    <div> 
+    <div id="home"> 
         <SliderVew />
-        <homePackages />
+        <HomePackages />
+        <VisaProcessing />
+        <WhyChooseUs />
     </div>
 
   );

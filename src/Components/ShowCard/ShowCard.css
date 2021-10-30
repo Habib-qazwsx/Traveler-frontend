@@ -1,0 +1,14 @@
+.showCard{
+    background-color: rgb(203, 255, 182);
+    height: 500px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    box-shadow: 0 10px 12px 0 rgba(0,0,0,0.2);
+}
+.showCard:hover{
+    background-color: rgb(172, 255, 247);
+    color: rgb(109, 16, 0);
+}
+.showCard img{
+    height: 300px;
+}
