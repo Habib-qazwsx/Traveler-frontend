@@ -14,7 +14,11 @@ const SliderVew = () => {
             src={img2}
             alt="First slide"
           />
+          <Carousel.Caption >
+            <h3>Get Traveler Booking</h3>
+          </Carousel.Caption>
         </Carousel.Item>
+
         <Carousel.Item>
           <img
             src={img1}
@@ -22,6 +26,9 @@ const SliderVew = () => {
             className=" fluid  w-100"
             alt="Second slide"
           />
+          <Carousel.Caption>
+            <h3>Get Safe Journey</h3>
+          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -30,6 +37,9 @@ const SliderVew = () => {
             src={img3}
             alt="Third slide"
           />
+          <Carousel.Caption>
+            <h3>Save Your Amount</h3>
+          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </div>

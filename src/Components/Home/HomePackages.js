@@ -6,7 +6,7 @@ import ShowCard from '../ShowCard/ShowCard';
 const HomePackages = () => {
     const [packages, setPackages] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/packages')
+        fetch('https://ghostly-dungeon-62726.herokuapp.com/packages')
         .then(res => res.json())
         .then(data => setPackages(data));
     });
@@ -14,7 +14,7 @@ const HomePackages = () => {
     
     return (
         <div>
-            <h1>Our Packages</h1>
+            <h1 style={{textAlign:"center", color:"chocolate", marginTop:"70px", marginBottom:"50px"}}>Our Packages</h1>
             <Row>
                {
                 packages.slice(0, 6).map(sendData =><ShowCard

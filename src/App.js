@@ -13,6 +13,7 @@ import Footer from './Components/Footer/Footer';
 import Layout from './Components/Layout';
 import Authprovider from './Context/Authprovider';
 import PrivateRaout from './Components/Login/PrivateRaout';
+import Alluser from './Components/AllUser/Allusers';
 
 
 function App() {
@@ -40,6 +41,10 @@ function App() {
           <PrivateRaout path='/bookingpackages'> 
             <BookingPackages></BookingPackages>
           </PrivateRaout>
+
+          <Route path='/users'>
+            <Alluser></Alluser>
+          </Route>
 
           <Route path='/aboutus'>
             <AboutUs></AboutUs>

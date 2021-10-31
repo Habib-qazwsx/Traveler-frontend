@@ -9,7 +9,7 @@ const ShowCard = (props) => {
 
   const handelBooking = () => {
 
-    fetch("http://localhost:5000/booking", {
+    fetch("https://ghostly-dungeon-62726.herokuapp.com/booking", {
       method: "POST",
       headers: {
         "content-type": "application/json",

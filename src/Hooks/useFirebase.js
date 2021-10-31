@@ -12,10 +12,7 @@ const useFirebase = () =>{
     const signInUsingGoogle = () =>{
         const googleProvider = new GoogleAuthProvider();
     
-        signInWithPopup(auth, googleProvider)
-        .then(result =>{
-            setUser(result.user);
-        })
+        return signInWithPopup(auth, googleProvider)
         .finally(()=>setIsLoading(false));
     }
     useEffect(()=>{
@@ -41,7 +38,9 @@ const useFirebase = () =>{
     return{
         user,
         isLoading,
+        setUser,
         signInUsingGoogle,
+        signInWithPopup,
         logOut
     }
 }
